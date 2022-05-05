@@ -24,8 +24,6 @@ Partial Class Menu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tabMenu = New Guna.UI2.WinForms.Guna2TabControl()
         Me.tabCoffee = New System.Windows.Forms.TabPage()
@@ -132,8 +130,13 @@ Partial Class Menu
         Me.Guna2GradientPanel26 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.cbCK1 = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.numCK1 = New Guna.UI2.WinForms.Guna2NumericUpDown()
-        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblTime = New System.Windows.Forms.Label()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
         Me.tabMenu.SuspendLayout()
         Me.tabCoffee.SuspendLayout()
         Me.Guna2GradientPanel7.SuspendLayout()
@@ -206,48 +209,21 @@ Partial Class Menu
         CType(Me.numCK2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GradientPanel26.SuspendLayout()
         CType(Me.numCK1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.TargetControl = Me
         '
-        'Guna2CirclePictureBox1
-        '
-        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2CirclePictureBox1.Image = Global.JavaProject.My.Resources.Resources.userIcon
-        Me.Guna2CirclePictureBox1.ImageRotate = 0!
-        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(1084, 21)
-        Me.Guna2CirclePictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(77, 43)
-        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2CirclePictureBox1.TabIndex = 1
-        Me.Guna2CirclePictureBox1.TabStop = False
-        Me.Guna2CirclePictureBox1.UseTransparentBackground = True
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = Global.JavaProject.My.Resources.Resources.JavaLogo
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-1, -3)
-        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(266, 139)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.Guna2PictureBox1.TabIndex = 0
-        Me.Guna2PictureBox1.TabStop = False
-        Me.Guna2PictureBox1.UseTransparentBackground = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(527, 135)
+        Me.Label2.Location = New System.Drawing.Point(526, 86)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(121, 50)
@@ -345,18 +321,21 @@ Partial Class Menu
         Me.numC7.BackColor = System.Drawing.Color.Transparent
         Me.numC7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numC7.BorderRadius = 5
+        Me.numC7.BorderThickness = 2
         Me.numC7.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numC7.DisabledState.ForeColor = System.Drawing.Color.White
-        Me.numC7.DisabledState.UpDownButtonForeColor = System.Drawing.Color.White
-        Me.numC7.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC7.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numC7.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC7.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numC7.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC7.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numC7.ForeColor = System.Drawing.Color.Black
         Me.numC7.Location = New System.Drawing.Point(44, 104)
         Me.numC7.Name = "numC7"
         Me.numC7.Size = New System.Drawing.Size(67, 30)
         Me.numC7.TabIndex = 0
-        Me.numC7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.numC7.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.numC7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel6
         '
@@ -397,18 +376,21 @@ Partial Class Menu
         Me.numC6.BackColor = System.Drawing.Color.Transparent
         Me.numC6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numC6.BorderRadius = 5
+        Me.numC6.BorderThickness = 2
         Me.numC6.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numC6.DisabledState.ForeColor = System.Drawing.Color.White
-        Me.numC6.DisabledState.UpDownButtonForeColor = System.Drawing.Color.White
-        Me.numC6.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC6.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numC6.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC6.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numC6.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC6.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numC6.ForeColor = System.Drawing.Color.Black
         Me.numC6.Location = New System.Drawing.Point(44, 104)
         Me.numC6.Name = "numC6"
         Me.numC6.Size = New System.Drawing.Size(67, 30)
         Me.numC6.TabIndex = 0
-        Me.numC6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.numC6.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.numC6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel5
         '
@@ -449,18 +431,21 @@ Partial Class Menu
         Me.numC5.BackColor = System.Drawing.Color.Transparent
         Me.numC5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numC5.BorderRadius = 5
+        Me.numC5.BorderThickness = 2
         Me.numC5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numC5.DisabledState.ForeColor = System.Drawing.Color.White
-        Me.numC5.DisabledState.UpDownButtonForeColor = System.Drawing.Color.White
-        Me.numC5.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC5.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numC5.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC5.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numC5.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC5.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numC5.ForeColor = System.Drawing.Color.Black
         Me.numC5.Location = New System.Drawing.Point(44, 104)
         Me.numC5.Name = "numC5"
         Me.numC5.Size = New System.Drawing.Size(67, 30)
         Me.numC5.TabIndex = 0
-        Me.numC5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.numC5.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.numC5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel4
         '
@@ -501,18 +486,21 @@ Partial Class Menu
         Me.numC4.BackColor = System.Drawing.Color.Transparent
         Me.numC4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numC4.BorderRadius = 5
+        Me.numC4.BorderThickness = 2
         Me.numC4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numC4.DisabledState.ForeColor = System.Drawing.Color.White
-        Me.numC4.DisabledState.UpDownButtonForeColor = System.Drawing.Color.White
-        Me.numC4.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC4.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numC4.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC4.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numC4.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numC4.ForeColor = System.Drawing.Color.Black
         Me.numC4.Location = New System.Drawing.Point(44, 104)
         Me.numC4.Name = "numC4"
         Me.numC4.Size = New System.Drawing.Size(67, 30)
         Me.numC4.TabIndex = 0
-        Me.numC4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.numC4.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.numC4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel3
         '
@@ -551,18 +539,21 @@ Partial Class Menu
         Me.numC3.BackColor = System.Drawing.Color.Transparent
         Me.numC3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numC3.BorderRadius = 5
+        Me.numC3.BorderThickness = 2
         Me.numC3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numC3.DisabledState.ForeColor = System.Drawing.Color.White
-        Me.numC3.DisabledState.UpDownButtonForeColor = System.Drawing.Color.White
-        Me.numC3.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC3.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numC3.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC3.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numC3.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numC3.ForeColor = System.Drawing.Color.Black
         Me.numC3.Location = New System.Drawing.Point(44, 104)
         Me.numC3.Name = "numC3"
         Me.numC3.Size = New System.Drawing.Size(67, 30)
         Me.numC3.TabIndex = 0
-        Me.numC3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.numC3.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.numC3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel2
         '
@@ -601,18 +592,21 @@ Partial Class Menu
         Me.numC2.BackColor = System.Drawing.Color.Transparent
         Me.numC2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numC2.BorderRadius = 5
+        Me.numC2.BorderThickness = 2
         Me.numC2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numC2.DisabledState.ForeColor = System.Drawing.Color.White
-        Me.numC2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.White
-        Me.numC2.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC2.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numC2.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numC2.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numC2.ForeColor = System.Drawing.Color.Black
         Me.numC2.Location = New System.Drawing.Point(44, 104)
         Me.numC2.Name = "numC2"
         Me.numC2.Size = New System.Drawing.Size(67, 30)
         Me.numC2.TabIndex = 0
-        Me.numC2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.numC2.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.numC2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel1
         '
@@ -651,18 +645,21 @@ Partial Class Menu
         Me.numC1.BackColor = System.Drawing.Color.Transparent
         Me.numC1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numC1.BorderRadius = 5
+        Me.numC1.BorderThickness = 2
         Me.numC1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numC1.DisabledState.ForeColor = System.Drawing.Color.White
-        Me.numC1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.White
-        Me.numC1.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC1.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numC1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numC1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numC1.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numC1.ForeColor = System.Drawing.Color.Black
         Me.numC1.Location = New System.Drawing.Point(44, 104)
         Me.numC1.Name = "numC1"
         Me.numC1.Size = New System.Drawing.Size(67, 30)
         Me.numC1.TabIndex = 0
-        Me.numC1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.numC1.UpDownButtonForeColor = System.Drawing.Color.White
+        Me.numC1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numC1.UseTransparentBackground = True
         '
         'tabNonCoffee
@@ -722,8 +719,14 @@ Partial Class Menu
         Me.numNC7.BackColor = System.Drawing.Color.Transparent
         Me.numNC7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numNC7.BorderRadius = 5
+        Me.numNC7.BorderThickness = 2
         Me.numNC7.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numNC7.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC7.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numNC7.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC7.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numNC7.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numNC7.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numNC7.ForeColor = System.Drawing.Color.Black
         Me.numNC7.Location = New System.Drawing.Point(44, 104)
@@ -731,7 +734,7 @@ Partial Class Menu
         Me.numNC7.Name = "numNC7"
         Me.numNC7.Size = New System.Drawing.Size(67, 30)
         Me.numNC7.TabIndex = 1
-        Me.numNC7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel13
         '
@@ -772,8 +775,14 @@ Partial Class Menu
         Me.numNC6.BackColor = System.Drawing.Color.Transparent
         Me.numNC6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numNC6.BorderRadius = 5
+        Me.numNC6.BorderThickness = 2
         Me.numNC6.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numNC6.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC6.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numNC6.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC6.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numNC6.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numNC6.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numNC6.ForeColor = System.Drawing.Color.Black
         Me.numNC6.Location = New System.Drawing.Point(44, 104)
@@ -781,7 +790,7 @@ Partial Class Menu
         Me.numNC6.Name = "numNC6"
         Me.numNC6.Size = New System.Drawing.Size(67, 30)
         Me.numNC6.TabIndex = 1
-        Me.numNC6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel12
         '
@@ -822,8 +831,14 @@ Partial Class Menu
         Me.numNC5.BackColor = System.Drawing.Color.Transparent
         Me.numNC5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numNC5.BorderRadius = 5
+        Me.numNC5.BorderThickness = 2
         Me.numNC5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numNC5.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC5.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numNC5.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC5.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numNC5.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numNC5.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numNC5.ForeColor = System.Drawing.Color.Black
         Me.numNC5.Location = New System.Drawing.Point(44, 104)
@@ -831,7 +846,7 @@ Partial Class Menu
         Me.numNC5.Name = "numNC5"
         Me.numNC5.Size = New System.Drawing.Size(67, 30)
         Me.numNC5.TabIndex = 1
-        Me.numNC5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel11
         '
@@ -872,8 +887,14 @@ Partial Class Menu
         Me.numNC4.BackColor = System.Drawing.Color.Transparent
         Me.numNC4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numNC4.BorderRadius = 5
+        Me.numNC4.BorderThickness = 2
         Me.numNC4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numNC4.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC4.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numNC4.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC4.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numNC4.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numNC4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numNC4.ForeColor = System.Drawing.Color.Black
         Me.numNC4.Location = New System.Drawing.Point(44, 104)
@@ -881,7 +902,7 @@ Partial Class Menu
         Me.numNC4.Name = "numNC4"
         Me.numNC4.Size = New System.Drawing.Size(67, 30)
         Me.numNC4.TabIndex = 1
-        Me.numNC4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel10
         '
@@ -922,8 +943,14 @@ Partial Class Menu
         Me.numNC3.BackColor = System.Drawing.Color.Transparent
         Me.numNC3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numNC3.BorderRadius = 5
+        Me.numNC3.BorderThickness = 2
         Me.numNC3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numNC3.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC3.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numNC3.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC3.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numNC3.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numNC3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numNC3.ForeColor = System.Drawing.Color.Black
         Me.numNC3.Location = New System.Drawing.Point(44, 104)
@@ -931,7 +958,7 @@ Partial Class Menu
         Me.numNC3.Name = "numNC3"
         Me.numNC3.Size = New System.Drawing.Size(67, 30)
         Me.numNC3.TabIndex = 1
-        Me.numNC3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel9
         '
@@ -972,8 +999,14 @@ Partial Class Menu
         Me.numNC2.BackColor = System.Drawing.Color.Transparent
         Me.numNC2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numNC2.BorderRadius = 5
+        Me.numNC2.BorderThickness = 2
         Me.numNC2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numNC2.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC2.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numNC2.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numNC2.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numNC2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numNC2.ForeColor = System.Drawing.Color.Black
         Me.numNC2.Location = New System.Drawing.Point(44, 104)
@@ -981,7 +1014,7 @@ Partial Class Menu
         Me.numNC2.Name = "numNC2"
         Me.numNC2.Size = New System.Drawing.Size(67, 30)
         Me.numNC2.TabIndex = 1
-        Me.numNC2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel8
         '
@@ -1022,8 +1055,14 @@ Partial Class Menu
         Me.numNC1.BackColor = System.Drawing.Color.Transparent
         Me.numNC1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numNC1.BorderRadius = 5
+        Me.numNC1.BorderThickness = 2
         Me.numNC1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numNC1.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC1.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numNC1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numNC1.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numNC1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numNC1.ForeColor = System.Drawing.Color.Black
         Me.numNC1.Location = New System.Drawing.Point(43, 104)
@@ -1031,7 +1070,7 @@ Partial Class Menu
         Me.numNC1.Name = "numNC1"
         Me.numNC1.Size = New System.Drawing.Size(67, 30)
         Me.numNC1.TabIndex = 1
-        Me.numNC1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numNC1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'tabSmoothies
         '
@@ -1087,15 +1126,21 @@ Partial Class Menu
         Me.numS4.BackColor = System.Drawing.Color.Transparent
         Me.numS4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numS4.BorderRadius = 5
+        Me.numS4.BorderThickness = 2
         Me.numS4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numS4.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS4.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numS4.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS4.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numS4.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numS4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numS4.ForeColor = System.Drawing.Color.Black
         Me.numS4.Location = New System.Drawing.Point(44, 104)
         Me.numS4.Name = "numS4"
         Me.numS4.Size = New System.Drawing.Size(67, 30)
         Me.numS4.TabIndex = 1
-        Me.numS4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel17
         '
@@ -1136,15 +1181,21 @@ Partial Class Menu
         Me.numS3.BackColor = System.Drawing.Color.Transparent
         Me.numS3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numS3.BorderRadius = 5
+        Me.numS3.BorderThickness = 2
         Me.numS3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numS3.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS3.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numS3.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS3.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numS3.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numS3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numS3.ForeColor = System.Drawing.Color.Black
         Me.numS3.Location = New System.Drawing.Point(44, 104)
         Me.numS3.Name = "numS3"
         Me.numS3.Size = New System.Drawing.Size(67, 30)
         Me.numS3.TabIndex = 1
-        Me.numS3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel16
         '
@@ -1185,15 +1236,21 @@ Partial Class Menu
         Me.numS2.BackColor = System.Drawing.Color.Transparent
         Me.numS2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numS2.BorderRadius = 5
+        Me.numS2.BorderThickness = 2
         Me.numS2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numS2.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS2.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numS2.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numS2.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numS2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numS2.ForeColor = System.Drawing.Color.Black
         Me.numS2.Location = New System.Drawing.Point(44, 104)
         Me.numS2.Name = "numS2"
         Me.numS2.Size = New System.Drawing.Size(67, 30)
         Me.numS2.TabIndex = 1
-        Me.numS2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel15
         '
@@ -1234,15 +1291,21 @@ Partial Class Menu
         Me.numS1.BackColor = System.Drawing.Color.Transparent
         Me.numS1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numS1.BorderRadius = 5
+        Me.numS1.BorderThickness = 2
         Me.numS1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numS1.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS1.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numS1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numS1.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numS1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numS1.ForeColor = System.Drawing.Color.Black
         Me.numS1.Location = New System.Drawing.Point(43, 104)
         Me.numS1.Name = "numS1"
         Me.numS1.Size = New System.Drawing.Size(67, 30)
         Me.numS1.TabIndex = 1
-        Me.numS1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numS1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'tabFrappe
         '
@@ -1301,16 +1364,21 @@ Partial Class Menu
         Me.numF7.BackColor = System.Drawing.Color.Transparent
         Me.numF7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numF7.BorderRadius = 5
-        Me.numF7.BorderThickness = 0
+        Me.numF7.BorderThickness = 2
         Me.numF7.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numF7.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF7.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numF7.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF7.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numF7.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numF7.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numF7.ForeColor = System.Drawing.Color.Black
         Me.numF7.Location = New System.Drawing.Point(44, 104)
         Me.numF7.Name = "numF7"
         Me.numF7.Size = New System.Drawing.Size(67, 30)
         Me.numF7.TabIndex = 1
-        Me.numF7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel24
         '
@@ -1351,16 +1419,21 @@ Partial Class Menu
         Me.numF6.BackColor = System.Drawing.Color.Transparent
         Me.numF6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numF6.BorderRadius = 5
-        Me.numF6.BorderThickness = 0
+        Me.numF6.BorderThickness = 2
         Me.numF6.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numF6.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF6.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numF6.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF6.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numF6.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numF6.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numF6.ForeColor = System.Drawing.Color.Black
         Me.numF6.Location = New System.Drawing.Point(44, 104)
         Me.numF6.Name = "numF6"
         Me.numF6.Size = New System.Drawing.Size(67, 30)
         Me.numF6.TabIndex = 1
-        Me.numF6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel23
         '
@@ -1401,16 +1474,21 @@ Partial Class Menu
         Me.numF5.BackColor = System.Drawing.Color.Transparent
         Me.numF5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numF5.BorderRadius = 5
-        Me.numF5.BorderThickness = 0
+        Me.numF5.BorderThickness = 2
         Me.numF5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numF5.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF5.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numF5.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF5.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numF5.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numF5.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numF5.ForeColor = System.Drawing.Color.Black
         Me.numF5.Location = New System.Drawing.Point(44, 104)
         Me.numF5.Name = "numF5"
         Me.numF5.Size = New System.Drawing.Size(67, 30)
         Me.numF5.TabIndex = 1
-        Me.numF5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel22
         '
@@ -1451,16 +1529,21 @@ Partial Class Menu
         Me.numF4.BackColor = System.Drawing.Color.Transparent
         Me.numF4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numF4.BorderRadius = 5
-        Me.numF4.BorderThickness = 0
+        Me.numF4.BorderThickness = 2
         Me.numF4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numF4.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF4.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numF4.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF4.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numF4.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numF4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numF4.ForeColor = System.Drawing.Color.Black
         Me.numF4.Location = New System.Drawing.Point(44, 104)
         Me.numF4.Name = "numF4"
         Me.numF4.Size = New System.Drawing.Size(67, 30)
         Me.numF4.TabIndex = 1
-        Me.numF4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel21
         '
@@ -1501,16 +1584,21 @@ Partial Class Menu
         Me.numF3.BackColor = System.Drawing.Color.Transparent
         Me.numF3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numF3.BorderRadius = 5
-        Me.numF3.BorderThickness = 0
+        Me.numF3.BorderThickness = 2
         Me.numF3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numF3.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF3.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numF3.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF3.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numF3.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numF3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numF3.ForeColor = System.Drawing.Color.Black
         Me.numF3.Location = New System.Drawing.Point(44, 104)
         Me.numF3.Name = "numF3"
         Me.numF3.Size = New System.Drawing.Size(67, 30)
         Me.numF3.TabIndex = 1
-        Me.numF3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel20
         '
@@ -1551,16 +1639,21 @@ Partial Class Menu
         Me.numF2.BackColor = System.Drawing.Color.Transparent
         Me.numF2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numF2.BorderRadius = 5
-        Me.numF2.BorderThickness = 0
+        Me.numF2.BorderThickness = 2
         Me.numF2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numF2.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF2.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numF2.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numF2.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numF2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numF2.ForeColor = System.Drawing.Color.Black
         Me.numF2.Location = New System.Drawing.Point(44, 104)
         Me.numF2.Name = "numF2"
         Me.numF2.Size = New System.Drawing.Size(67, 30)
         Me.numF2.TabIndex = 1
-        Me.numF2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel19
         '
@@ -1601,15 +1694,21 @@ Partial Class Menu
         Me.numF1.BackColor = System.Drawing.Color.Transparent
         Me.numF1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numF1.BorderRadius = 5
+        Me.numF1.BorderThickness = 2
         Me.numF1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numF1.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF1.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numF1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numF1.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numF1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numF1.ForeColor = System.Drawing.Color.Black
         Me.numF1.Location = New System.Drawing.Point(44, 104)
         Me.numF1.Name = "numF1"
         Me.numF1.Size = New System.Drawing.Size(67, 30)
         Me.numF1.TabIndex = 1
-        Me.numF1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numF1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'tabCakes
         '
@@ -1669,16 +1768,21 @@ Partial Class Menu
         Me.numCK8.BackColor = System.Drawing.Color.Transparent
         Me.numCK8.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK8.BorderRadius = 5
-        Me.numCK8.BorderThickness = 0
+        Me.numCK8.BorderThickness = 2
         Me.numCK8.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK8.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK8.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK8.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK8.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK8.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK8.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK8.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK8.ForeColor = System.Drawing.Color.Black
         Me.numCK8.Location = New System.Drawing.Point(44, 104)
         Me.numCK8.Name = "numCK8"
         Me.numCK8.Size = New System.Drawing.Size(67, 30)
         Me.numCK8.TabIndex = 1
-        Me.numCK8.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK8.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel32
         '
@@ -1719,16 +1823,21 @@ Partial Class Menu
         Me.numCK7.BackColor = System.Drawing.Color.Transparent
         Me.numCK7.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK7.BorderRadius = 5
-        Me.numCK7.BorderThickness = 0
+        Me.numCK7.BorderThickness = 2
         Me.numCK7.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK7.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK7.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK7.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK7.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK7.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK7.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK7.ForeColor = System.Drawing.Color.Black
         Me.numCK7.Location = New System.Drawing.Point(44, 104)
         Me.numCK7.Name = "numCK7"
         Me.numCK7.Size = New System.Drawing.Size(67, 30)
         Me.numCK7.TabIndex = 1
-        Me.numCK7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK7.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel31
         '
@@ -1769,16 +1878,21 @@ Partial Class Menu
         Me.numCK6.BackColor = System.Drawing.Color.Transparent
         Me.numCK6.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK6.BorderRadius = 5
-        Me.numCK6.BorderThickness = 0
+        Me.numCK6.BorderThickness = 2
         Me.numCK6.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK6.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK6.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK6.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK6.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK6.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK6.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK6.ForeColor = System.Drawing.Color.Black
         Me.numCK6.Location = New System.Drawing.Point(44, 104)
         Me.numCK6.Name = "numCK6"
         Me.numCK6.Size = New System.Drawing.Size(67, 30)
         Me.numCK6.TabIndex = 1
-        Me.numCK6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK6.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel30
         '
@@ -1819,16 +1933,21 @@ Partial Class Menu
         Me.numCK5.BackColor = System.Drawing.Color.Transparent
         Me.numCK5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK5.BorderRadius = 5
-        Me.numCK5.BorderThickness = 0
+        Me.numCK5.BorderThickness = 2
         Me.numCK5.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK5.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK5.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK5.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK5.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK5.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK5.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK5.ForeColor = System.Drawing.Color.Black
         Me.numCK5.Location = New System.Drawing.Point(44, 104)
         Me.numCK5.Name = "numCK5"
         Me.numCK5.Size = New System.Drawing.Size(67, 30)
         Me.numCK5.TabIndex = 1
-        Me.numCK5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK5.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel29
         '
@@ -1869,16 +1988,21 @@ Partial Class Menu
         Me.numCK4.BackColor = System.Drawing.Color.Transparent
         Me.numCK4.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK4.BorderRadius = 5
-        Me.numCK4.BorderThickness = 0
+        Me.numCK4.BorderThickness = 2
         Me.numCK4.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK4.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK4.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK4.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK4.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK4.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK4.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK4.ForeColor = System.Drawing.Color.Black
         Me.numCK4.Location = New System.Drawing.Point(44, 104)
         Me.numCK4.Name = "numCK4"
         Me.numCK4.Size = New System.Drawing.Size(67, 30)
         Me.numCK4.TabIndex = 1
-        Me.numCK4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK4.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel28
         '
@@ -1919,16 +2043,21 @@ Partial Class Menu
         Me.numCK3.BackColor = System.Drawing.Color.Transparent
         Me.numCK3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK3.BorderRadius = 5
-        Me.numCK3.BorderThickness = 0
+        Me.numCK3.BorderThickness = 2
         Me.numCK3.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK3.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK3.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK3.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK3.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK3.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK3.ForeColor = System.Drawing.Color.Black
         Me.numCK3.Location = New System.Drawing.Point(44, 104)
         Me.numCK3.Name = "numCK3"
         Me.numCK3.Size = New System.Drawing.Size(67, 30)
         Me.numCK3.TabIndex = 1
-        Me.numCK3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK3.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel27
         '
@@ -1969,16 +2098,21 @@ Partial Class Menu
         Me.numCK2.BackColor = System.Drawing.Color.Transparent
         Me.numCK2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK2.BorderRadius = 5
-        Me.numCK2.BorderThickness = 0
+        Me.numCK2.BorderThickness = 2
         Me.numCK2.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK2.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK2.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK2.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK2.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK2.ForeColor = System.Drawing.Color.Black
         Me.numCK2.Location = New System.Drawing.Point(44, 104)
         Me.numCK2.Name = "numCK2"
         Me.numCK2.Size = New System.Drawing.Size(67, 30)
         Me.numCK2.TabIndex = 1
-        Me.numCK2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK2.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         '
         'Guna2GradientPanel26
         '
@@ -2019,16 +2153,110 @@ Partial Class Menu
         Me.numCK1.BackColor = System.Drawing.Color.Transparent
         Me.numCK1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.numCK1.BorderRadius = 5
-        Me.numCK1.BorderThickness = 0
+        Me.numCK1.BorderThickness = 2
         Me.numCK1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numCK1.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK1.DisabledState.ForeColor = System.Drawing.Color.Black
+        Me.numCK1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.numCK1.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.numCK1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numCK1.ForeColor = System.Drawing.Color.Black
         Me.numCK1.Location = New System.Drawing.Point(44, 104)
         Me.numCK1.Name = "numCK1"
         Me.numCK1.Size = New System.Drawing.Size(67, 30)
         Me.numCK1.TabIndex = 1
-        Me.numCK1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.numCK1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        '
+        'lblTime
+        '
+        Me.lblTime.AutoSize = True
+        Me.lblTime.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTime.ForeColor = System.Drawing.Color.White
+        Me.lblTime.Location = New System.Drawing.Point(12, 695)
+        Me.lblTime.Name = "lblTime"
+        Me.lblTime.Size = New System.Drawing.Size(42, 20)
+        Me.lblTime.TabIndex = 16
+        Me.lblTime.Text = "TIME"
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.ForeColor = System.Drawing.Color.White
+        Me.lblDate.Location = New System.Drawing.Point(87, 695)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(45, 20)
+        Me.lblDate.TabIndex = 17
+        Me.lblDate.Text = "DATE"
+        '
+        'Timer1
+        '
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox2.Image = Global.JavaProject.My.Resources.Resources.resetIcon
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(119, 147)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(85, 48)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 18
+        Me.Guna2PictureBox2.TabStop = False
+        Me.Guna2PictureBox2.UseTransparentBackground = True
+        '
+        'Guna2CirclePictureBox1
+        '
+        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2CirclePictureBox1.Image = Global.JavaProject.My.Resources.Resources.userIcon
+        Me.Guna2CirclePictureBox1.ImageRotate = 0!
+        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(1084, 21)
+        Me.Guna2CirclePictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
+        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(77, 43)
+        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2CirclePictureBox1.TabIndex = 1
+        Me.Guna2CirclePictureBox1.TabStop = False
+        Me.Guna2CirclePictureBox1.UseTransparentBackground = True
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = Global.JavaProject.My.Resources.Resources.JavaLogo
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-1, -3)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(266, 139)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
+        Me.Guna2PictureBox1.UseTransparentBackground = True
+        '
+        'btnSignUp
+        '
+        Me.btnSignUp.Animated = True
+        Me.btnSignUp.AutoRoundedCorners = True
+        Me.btnSignUp.BackColor = System.Drawing.Color.Transparent
+        Me.btnSignUp.BorderColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnSignUp.BorderRadius = 23
+        Me.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSignUp.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnSignUp.Location = New System.Drawing.Point(892, 147)
+        Me.btnSignUp.Name = "btnSignUp"
+        Me.btnSignUp.Size = New System.Drawing.Size(147, 48)
+        Me.btnSignUp.TabIndex = 19
+        Me.btnSignUp.Text = "Done"
+        Me.btnSignUp.UseTransparentBackground = True
         '
         'Menu
         '
@@ -2036,6 +2264,10 @@ Partial Class Menu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1172, 720)
+        Me.Controls.Add(Me.btnSignUp)
+        Me.Controls.Add(Me.Guna2PictureBox2)
+        Me.Controls.Add(Me.lblDate)
+        Me.Controls.Add(Me.lblTime)
         Me.Controls.Add(Me.tabMenu)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Guna2CirclePictureBox1)
@@ -2046,8 +2278,7 @@ Partial Class Menu
         Me.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Name = "Menu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = " "
         Me.tabMenu.ResumeLayout(False)
         Me.tabCoffee.ResumeLayout(False)
         Me.Guna2GradientPanel7.ResumeLayout(False)
@@ -2153,6 +2384,9 @@ Partial Class Menu
         Me.Guna2GradientPanel26.ResumeLayout(False)
         Me.Guna2GradientPanel26.PerformLayout()
         CType(Me.numCK1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2267,4 +2501,9 @@ Partial Class Menu
     Friend WithEvents cbCK3 As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents cbCK2 As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents cbCK1 As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents lblDate As Label
+    Friend WithEvents lblTime As Label
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
 End Class

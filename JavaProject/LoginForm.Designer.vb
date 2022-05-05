@@ -183,7 +183,7 @@ Partial Class LoginForm
         Me.btnBackToSignIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnBackToSignIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnBackToSignIn.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
-        Me.btnBackToSignIn.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBackToSignIn.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.btnBackToSignIn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.btnBackToSignIn.Location = New System.Drawing.Point(406, 424)
         Me.btnBackToSignIn.Name = "btnBackToSignIn"
@@ -390,7 +390,7 @@ Partial Class LoginForm
         Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnSignUp.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
         Me.btnSignUp.Location = New System.Drawing.Point(232, 424)
         Me.btnSignUp.Name = "btnSignUp"
