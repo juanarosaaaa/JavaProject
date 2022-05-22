@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Menu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,16 @@ Partial Class Menu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblMenu = New System.Windows.Forms.Label()
         Me.tabMenu = New Guna.UI2.WinForms.Guna2TabControl()
         Me.tabCoffee = New System.Windows.Forms.TabPage()
         Me.Guna2GradientPanel7 = New Guna.UI2.WinForms.Guna2GradientPanel()
@@ -133,10 +138,32 @@ Partial Class Menu
         Me.lblTime = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.picReset = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnDone = New Guna.UI2.WinForms.Guna2Button()
+        Me.pnlReceipt = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dgvOrder = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Products = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QTY = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnReset = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnEdit = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnPrint = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSave = New Guna.UI2.WinForms.Guna2Button()
+        Me.rtbReceipt = New System.Windows.Forms.RichTextBox()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.lblUser = New System.Windows.Forms.Label()
+        Me.btnbSignOut = New Guna.UI2.WinForms.Guna2Button()
         Me.tabMenu.SuspendLayout()
         Me.tabCoffee.SuspendLayout()
         Me.Guna2GradientPanel7.SuspendLayout()
@@ -209,26 +236,27 @@ Partial Class Menu
         CType(Me.numCK2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GradientPanel26.SuspendLayout()
         CType(Me.numCK1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picReset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlReceipt.SuspendLayout()
+        CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.TargetControl = Me
         '
-        'Label2
+        'lblMenu
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(526, 86)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 50)
-        Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Menu"
+        Me.lblMenu.AutoSize = True
+        Me.lblMenu.Font = New System.Drawing.Font("Segoe UI", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMenu.ForeColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.lblMenu.Location = New System.Drawing.Point(526, 86)
+        Me.lblMenu.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblMenu.Name = "lblMenu"
+        Me.lblMenu.Size = New System.Drawing.Size(121, 50)
+        Me.lblMenu.TabIndex = 12
+        Me.lblMenu.Text = "Menu"
         '
         'tabMenu
         '
@@ -305,7 +333,7 @@ Partial Class Menu
         Me.cbC7.CheckMarkColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbC7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.cbC7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.cbC7.Location = New System.Drawing.Point(9, 38)
+        Me.cbC7.Location = New System.Drawing.Point(9, 40)
         Me.cbC7.Name = "cbC7"
         Me.cbC7.Size = New System.Drawing.Size(143, 32)
         Me.cbC7.TabIndex = 21
@@ -360,11 +388,11 @@ Partial Class Menu
         Me.cbC6.CheckMarkColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbC6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.cbC6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.cbC6.Location = New System.Drawing.Point(14, 10)
+        Me.cbC6.Location = New System.Drawing.Point(13, 24)
         Me.cbC6.Name = "cbC6"
-        Me.cbC6.Size = New System.Drawing.Size(128, 88)
+        Me.cbC6.Size = New System.Drawing.Size(104, 60)
         Me.cbC6.TabIndex = 22
-        Me.cbC6.Text = "White" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Chocolate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Mocha"
+        Me.cbC6.Text = "White" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Mocha"
         Me.cbC6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbC6.UncheckedState.BorderRadius = 0
         Me.cbC6.UncheckedState.BorderThickness = 2
@@ -419,7 +447,7 @@ Partial Class Menu
         Me.cbC5.Name = "cbC5"
         Me.cbC5.Size = New System.Drawing.Size(123, 60)
         Me.cbC5.TabIndex = 21
-        Me.cbC5.Text = "Caramel" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Machiato"
+        Me.cbC5.Text = "Caramel " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Machiato"
         Me.cbC5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbC5.UncheckedState.BorderRadius = 0
         Me.cbC5.UncheckedState.BorderThickness = 2
@@ -819,7 +847,7 @@ Partial Class Menu
         Me.cbNC5.Name = "cbNC5"
         Me.cbNC5.Size = New System.Drawing.Size(143, 60)
         Me.cbNC5.TabIndex = 25
-        Me.cbNC5.Text = "Peppermint" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tea" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.cbNC5.Text = "Peppermint" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tea"
         Me.cbNC5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbNC5.UncheckedState.BorderRadius = 0
         Me.cbNC5.UncheckedState.BorderThickness = 2
@@ -931,7 +959,7 @@ Partial Class Menu
         Me.cbNC3.Name = "cbNC3"
         Me.cbNC3.Size = New System.Drawing.Size(135, 60)
         Me.cbNC3.TabIndex = 23
-        Me.cbNC3.Text = "Lemon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ginger Tea"
+        Me.cbNC3.Text = "Lemon " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Ginger Tea"
         Me.cbNC3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbNC3.UncheckedState.BorderRadius = 0
         Me.cbNC3.UncheckedState.BorderThickness = 2
@@ -1352,7 +1380,7 @@ Partial Class Menu
         Me.cbF7.Name = "cbF7"
         Me.cbF7.Size = New System.Drawing.Size(128, 60)
         Me.cbF7.TabIndex = 31
-        Me.cbF7.Text = "Dark" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Chocolate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.cbF7.Text = "Dark" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Chocolate"
         Me.cbF7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbF7.UncheckedState.BorderRadius = 0
         Me.cbF7.UncheckedState.BorderThickness = 2
@@ -1407,7 +1435,7 @@ Partial Class Menu
         Me.cbF6.Name = "cbF6"
         Me.cbF6.Size = New System.Drawing.Size(128, 60)
         Me.cbF6.TabIndex = 30
-        Me.cbF6.Text = "Chocolate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Chip"
+        Me.cbF6.Text = "Chocolate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Chip"
         Me.cbF6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbF6.UncheckedState.BorderRadius = 0
         Me.cbF6.UncheckedState.BorderThickness = 2
@@ -1515,9 +1543,9 @@ Partial Class Menu
         Me.cbF4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbF4.Location = New System.Drawing.Point(6, 17)
         Me.cbF4.Name = "cbF4"
-        Me.cbF4.Size = New System.Drawing.Size(155, 60)
+        Me.cbF4.Size = New System.Drawing.Size(111, 60)
         Me.cbF4.TabIndex = 28
-        Me.cbF4.Text = "White Choco" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Mocha"
+        Me.cbF4.Text = "Salted" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Caramel"
         Me.cbF4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbF4.UncheckedState.BorderRadius = 0
         Me.cbF4.UncheckedState.BorderThickness = 2
@@ -1570,9 +1598,9 @@ Partial Class Menu
         Me.cbF3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbF3.Location = New System.Drawing.Point(14, 17)
         Me.cbF3.Name = "cbF3"
-        Me.cbF3.Size = New System.Drawing.Size(123, 60)
+        Me.cbF3.Size = New System.Drawing.Size(137, 60)
         Me.cbF3.TabIndex = 27
-        Me.cbF3.Text = "Caramel" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Machiato" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.cbF3.Text = "Cookies 'n " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cream"
         Me.cbF3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbF3.UncheckedState.BorderRadius = 0
         Me.cbF3.UncheckedState.BorderThickness = 2
@@ -1752,11 +1780,11 @@ Partial Class Menu
         Me.cbCK8.CheckMarkColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.cbCK8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.cbCK8.Location = New System.Drawing.Point(9, 20)
+        Me.cbCK8.Location = New System.Drawing.Point(11, 34)
         Me.cbCK8.Name = "cbCK8"
-        Me.cbCK8.Size = New System.Drawing.Size(169, 60)
+        Me.cbCK8.Size = New System.Drawing.Size(116, 32)
         Me.cbCK8.TabIndex = 33
-        Me.cbCK8.Text = "Cafe Latte's" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Tres Lecheflan"
+        Me.cbCK8.Text = "Tiramisu"
         Me.cbCK8.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK8.UncheckedState.BorderRadius = 0
         Me.cbCK8.UncheckedState.BorderThickness = 2
@@ -1807,11 +1835,11 @@ Partial Class Menu
         Me.cbCK7.CheckMarkColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.cbCK7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.cbCK7.Location = New System.Drawing.Point(11, 20)
+        Me.cbCK7.Location = New System.Drawing.Point(11, 34)
         Me.cbCK7.Name = "cbCK7"
-        Me.cbCK7.Size = New System.Drawing.Size(165, 60)
+        Me.cbCK7.Size = New System.Drawing.Size(113, 32)
         Me.cbCK7.TabIndex = 32
-        Me.cbCK7.Text = "Blum's Coffee" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Crunch"
+        Me.cbCK7.Text = "Cupcake"
         Me.cbCK7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK7.UncheckedState.BorderRadius = 0
         Me.cbCK7.UncheckedState.BorderThickness = 2
@@ -1862,7 +1890,7 @@ Partial Class Menu
         Me.cbCK6.CheckMarkColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.cbCK6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.cbCK6.Location = New System.Drawing.Point(10, 34)
+        Me.cbCK6.Location = New System.Drawing.Point(7, 34)
         Me.cbCK6.Name = "cbCK6"
         Me.cbCK6.Size = New System.Drawing.Size(155, 32)
         Me.cbCK6.TabIndex = 31
@@ -1974,9 +2002,9 @@ Partial Class Menu
         Me.cbCK4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK4.Location = New System.Drawing.Point(9, 25)
         Me.cbCK4.Name = "cbCK4"
-        Me.cbCK4.Size = New System.Drawing.Size(151, 60)
+        Me.cbCK4.Size = New System.Drawing.Size(135, 60)
         Me.cbCK4.TabIndex = 29
-        Me.cbCK4.Text = "Red Velvet" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cheese Cake"
+        Me.cbCK4.Text = "Red Velvet" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cake"
         Me.cbCK4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK4.UncheckedState.BorderRadius = 0
         Me.cbCK4.UncheckedState.BorderThickness = 2
@@ -2084,9 +2112,9 @@ Partial Class Menu
         Me.cbCK2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK2.Location = New System.Drawing.Point(10, 25)
         Me.cbCK2.Name = "cbCK2"
-        Me.cbCK2.Size = New System.Drawing.Size(151, 60)
+        Me.cbCK2.Size = New System.Drawing.Size(127, 60)
         Me.cbCK2.TabIndex = 27
-        Me.cbCK2.Text = "Blueberry" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cheese Cake"
+        Me.cbCK2.Text = "Blueberry" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cake"
         Me.cbCK2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK2.UncheckedState.BorderRadius = 0
         Me.cbCK2.UncheckedState.BorderThickness = 2
@@ -2139,9 +2167,9 @@ Partial Class Menu
         Me.cbCK1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK1.Location = New System.Drawing.Point(8, 25)
         Me.cbCK1.Name = "cbCK1"
-        Me.cbCK1.Size = New System.Drawing.Size(128, 60)
+        Me.cbCK1.Size = New System.Drawing.Size(134, 60)
         Me.cbCK1.TabIndex = 26
-        Me.cbCK1.Text = "Chocolate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cake" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.cbCK1.Text = "Chocolate " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cake"
         Me.cbCK1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cbCK1.UncheckedState.BorderRadius = 0
         Me.cbCK1.UncheckedState.BorderThickness = 2
@@ -2194,34 +2222,18 @@ Partial Class Menu
         'Timer1
         '
         '
-        'Guna2PictureBox2
+        'picReset
         '
-        Me.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox2.Image = Global.JavaProject.My.Resources.Resources.resetIcon
-        Me.Guna2PictureBox2.ImageRotate = 0!
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(119, 147)
-        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Me.Guna2PictureBox2.Size = New System.Drawing.Size(85, 48)
-        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2PictureBox2.TabIndex = 18
-        Me.Guna2PictureBox2.TabStop = False
-        Me.Guna2PictureBox2.UseTransparentBackground = True
-        '
-        'Guna2CirclePictureBox1
-        '
-        Me.Guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2CirclePictureBox1.Image = Global.JavaProject.My.Resources.Resources.userIcon
-        Me.Guna2CirclePictureBox1.ImageRotate = 0!
-        Me.Guna2CirclePictureBox1.Location = New System.Drawing.Point(1084, 21)
-        Me.Guna2CirclePictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Me.Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox1.Size = New System.Drawing.Size(77, 43)
-        Me.Guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2CirclePictureBox1.TabIndex = 1
-        Me.Guna2CirclePictureBox1.TabStop = False
-        Me.Guna2CirclePictureBox1.UseTransparentBackground = True
+        Me.picReset.BackColor = System.Drawing.Color.Transparent
+        Me.picReset.Image = Global.JavaProject.My.Resources.Resources.resetIcon
+        Me.picReset.ImageRotate = 0!
+        Me.picReset.Location = New System.Drawing.Point(119, 147)
+        Me.picReset.Name = "picReset"
+        Me.picReset.Size = New System.Drawing.Size(85, 48)
+        Me.picReset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picReset.TabIndex = 18
+        Me.picReset.TabStop = False
+        Me.picReset.UseTransparentBackground = True
         '
         'Guna2PictureBox1
         '
@@ -2237,26 +2249,362 @@ Partial Class Menu
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
-        'btnSignUp
+        'btnDone
         '
-        Me.btnSignUp.Animated = True
-        Me.btnSignUp.AutoRoundedCorners = True
-        Me.btnSignUp.BackColor = System.Drawing.Color.Transparent
-        Me.btnSignUp.BorderColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
-        Me.btnSignUp.BorderRadius = 23
-        Me.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnSignUp.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
-        Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 10.8!)
-        Me.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.btnSignUp.Location = New System.Drawing.Point(892, 147)
-        Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(147, 48)
-        Me.btnSignUp.TabIndex = 19
-        Me.btnSignUp.Text = "Done"
-        Me.btnSignUp.UseTransparentBackground = True
+        Me.btnDone.Animated = True
+        Me.btnDone.AutoRoundedCorners = True
+        Me.btnDone.BackColor = System.Drawing.Color.Transparent
+        Me.btnDone.BorderColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnDone.BorderRadius = 23
+        Me.btnDone.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnDone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnDone.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnDone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnDone.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnDone.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnDone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnDone.Location = New System.Drawing.Point(892, 147)
+        Me.btnDone.Name = "btnDone"
+        Me.btnDone.Size = New System.Drawing.Size(147, 48)
+        Me.btnDone.TabIndex = 19
+        Me.btnDone.Text = "Add to Cart"
+        Me.btnDone.UseTransparentBackground = True
+        '
+        'pnlReceipt
+        '
+        Me.pnlReceipt.BackColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.pnlReceipt.Controls.Add(Me.Label7)
+        Me.pnlReceipt.Controls.Add(Me.lblTotal)
+        Me.pnlReceipt.Controls.Add(Me.Label5)
+        Me.pnlReceipt.Controls.Add(Me.Label4)
+        Me.pnlReceipt.Controls.Add(Me.Label3)
+        Me.pnlReceipt.Controls.Add(Me.Label2)
+        Me.pnlReceipt.Controls.Add(Me.Label1)
+        Me.pnlReceipt.Controls.Add(Me.dgvOrder)
+        Me.pnlReceipt.Controls.Add(Me.btnReset)
+        Me.pnlReceipt.Controls.Add(Me.btnEdit)
+        Me.pnlReceipt.Controls.Add(Me.btnPrint)
+        Me.pnlReceipt.Controls.Add(Me.btnSave)
+        Me.pnlReceipt.Controls.Add(Me.rtbReceipt)
+        Me.pnlReceipt.Location = New System.Drawing.Point(236, 147)
+        Me.pnlReceipt.Name = "pnlReceipt"
+        Me.pnlReceipt.Size = New System.Drawing.Size(708, 492)
+        Me.pnlReceipt.TabIndex = 20
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(449, 96)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(90, 31)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Receipt"
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Location = New System.Drawing.Point(253, 414)
+        Me.lblTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(53, 28)
+        Me.lblTotal.TabIndex = 30
+        Me.lblTotal.Text = "total"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(196, 417)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(53, 25)
+        Me.Label5.TabIndex = 29
+        Me.Label5.Text = "Total:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(246, 133)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(77, 25)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "Amount"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(175, 133)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(41, 25)
+        Me.Label3.TabIndex = 27
+        Me.Label3.Text = "Qty"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(66, 135)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(74, 25)
+        Me.Label2.TabIndex = 26
+        Me.Label2.Text = "Product"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(111, 96)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(149, 31)
+        Me.Label1.TabIndex = 21
+        Me.Label1.Text = "Order Details"
+        '
+        'dgvOrder
+        '
+        Me.dgvOrder.AllowUserToAddRows = False
+        Me.dgvOrder.AllowUserToDeleteRows = False
+        Me.dgvOrder.AllowUserToResizeRows = False
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
+        Me.dgvOrder.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle25
+        Me.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvOrder.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrder.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        Me.dgvOrder.ColumnHeadersHeight = 4
+        Me.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Products, Me.QTY, Me.Amount})
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle27.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrder.DefaultCellStyle = DataGridViewCellStyle27
+        Me.dgvOrder.EnableHeadersVisualStyles = False
+        Me.dgvOrder.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.Location = New System.Drawing.Point(58, 163)
+        Me.dgvOrder.Name = "dgvOrder"
+        Me.dgvOrder.ReadOnly = True
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrder.RowHeadersDefaultCellStyle = DataGridViewCellStyle28
+        Me.dgvOrder.RowHeadersVisible = False
+        Me.dgvOrder.RowHeadersWidth = 51
+        Me.dgvOrder.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvOrder.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvOrder.RowTemplate.Height = 24
+        Me.dgvOrder.RowTemplate.ReadOnly = True
+        Me.dgvOrder.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvOrder.Size = New System.Drawing.Size(268, 251)
+        Me.dgvOrder.TabIndex = 25
+        Me.dgvOrder.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvOrder.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        Me.dgvOrder.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
+        Me.dgvOrder.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
+        Me.dgvOrder.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
+        Me.dgvOrder.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvOrder.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvOrder.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvOrder.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvOrder.ThemeStyle.HeaderStyle.Height = 4
+        Me.dgvOrder.ThemeStyle.ReadOnly = True
+        Me.dgvOrder.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.dgvOrder.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        Me.dgvOrder.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White
+        Me.dgvOrder.ThemeStyle.RowsStyle.Height = 24
+        Me.dgvOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.dgvOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White
+        '
+        'Products
+        '
+        Me.Products.HeaderText = "products"
+        Me.Products.MinimumWidth = 6
+        Me.Products.Name = "Products"
+        Me.Products.ReadOnly = True
+        Me.Products.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Products.ToolTipText = "products"
+        '
+        'QTY
+        '
+        Me.QTY.HeaderText = "qty"
+        Me.QTY.MinimumWidth = 6
+        Me.QTY.Name = "QTY"
+        Me.QTY.ReadOnly = True
+        Me.QTY.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.QTY.ToolTipText = "qty"
+        '
+        'Amount
+        '
+        Me.Amount.HeaderText = "amount"
+        Me.Amount.MinimumWidth = 6
+        Me.Amount.Name = "Amount"
+        Me.Amount.ReadOnly = True
+        Me.Amount.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Amount.ToolTipText = "amount"
+        '
+        'btnReset
+        '
+        Me.btnReset.Animated = True
+        Me.btnReset.AutoRoundedCorners = True
+        Me.btnReset.BorderRadius = 23
+        Me.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnReset.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnReset.ForeColor = System.Drawing.Color.White
+        Me.btnReset.Location = New System.Drawing.Point(534, 23)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(147, 48)
+        Me.btnReset.TabIndex = 24
+        Me.btnReset.Text = "Reset"
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Animated = True
+        Me.btnEdit.AutoRoundedCorners = True
+        Me.btnEdit.BorderRadius = 23
+        Me.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnEdit.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnEdit.ForeColor = System.Drawing.Color.White
+        Me.btnEdit.Location = New System.Drawing.Point(21, 23)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(147, 48)
+        Me.btnEdit.TabIndex = 23
+        Me.btnEdit.Text = "Edit"
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Animated = True
+        Me.btnPrint.AutoRoundedCorners = True
+        Me.btnPrint.BorderRadius = 23
+        Me.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnPrint.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnPrint.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnPrint.ForeColor = System.Drawing.Color.White
+        Me.btnPrint.Location = New System.Drawing.Point(534, 420)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(147, 48)
+        Me.btnPrint.TabIndex = 22
+        Me.btnPrint.Text = "Print"
+        '
+        'btnSave
+        '
+        Me.btnSave.Animated = True
+        Me.btnSave.AutoRoundedCorners = True
+        Me.btnSave.BorderRadius = 23
+        Me.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSave.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnSave.ForeColor = System.Drawing.Color.White
+        Me.btnSave.Location = New System.Drawing.Point(366, 420)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(147, 48)
+        Me.btnSave.TabIndex = 21
+        Me.btnSave.Text = "Save"
+        '
+        'rtbReceipt
+        '
+        Me.rtbReceipt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtbReceipt.Location = New System.Drawing.Point(335, 133)
+        Me.rtbReceipt.Name = "rtbReceipt"
+        Me.rtbReceipt.ReadOnly = True
+        Me.rtbReceipt.Size = New System.Drawing.Size(322, 281)
+        Me.rtbReceipt.TabIndex = 1
+        Me.rtbReceipt.Text = ""
+        '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'PrintDocument1
+        '
+        '
+        'lblUser
+        '
+        Me.lblUser.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(1088, 695)
+        Me.lblUser.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lblUser.Size = New System.Drawing.Size(29, 20)
+        Me.lblUser.TabIndex = 32
+        Me.lblUser.Text = "   u"
+        Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'btnbSignOut
+        '
+        Me.btnbSignOut.Animated = True
+        Me.btnbSignOut.AutoRoundedCorners = True
+        Me.btnbSignOut.BorderColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnbSignOut.BorderRadius = 23
+        Me.btnbSignOut.BorderThickness = 2
+        Me.btnbSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnbSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnbSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnbSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnbSignOut.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnbSignOut.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnbSignOut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnbSignOut.Location = New System.Drawing.Point(1014, 12)
+        Me.btnbSignOut.Name = "btnbSignOut"
+        Me.btnbSignOut.Size = New System.Drawing.Size(147, 48)
+        Me.btnbSignOut.TabIndex = 32
+        Me.btnbSignOut.Text = "Sign out"
         '
         'Menu
         '
@@ -2264,13 +2612,15 @@ Partial Class Menu
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1172, 720)
-        Me.Controls.Add(Me.btnSignUp)
-        Me.Controls.Add(Me.Guna2PictureBox2)
+        Me.Controls.Add(Me.btnbSignOut)
+        Me.Controls.Add(Me.lblUser)
+        Me.Controls.Add(Me.pnlReceipt)
+        Me.Controls.Add(Me.btnDone)
+        Me.Controls.Add(Me.picReset)
         Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.lblTime)
         Me.Controls.Add(Me.tabMenu)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Guna2CirclePictureBox1)
+        Me.Controls.Add(Me.lblMenu)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
@@ -2384,18 +2734,19 @@ Partial Class Menu
         Me.Guna2GradientPanel26.ResumeLayout(False)
         Me.Guna2GradientPanel26.PerformLayout()
         CType(Me.numCK1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picReset, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlReceipt.ResumeLayout(False)
+        Me.pnlReceipt.PerformLayout()
+        CType(Me.dgvOrder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblMenu As Label
     Friend WithEvents tabMenu As Guna.UI2.WinForms.Guna2TabControl
     Friend WithEvents tabCoffee As TabPage
     Friend WithEvents tabNonCoffee As TabPage
@@ -2504,6 +2855,29 @@ Partial Class Menu
     Friend WithEvents lblDate As Label
     Friend WithEvents lblTime As Label
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents picReset As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents btnDone As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents pnlReceipt As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents rtbReceipt As RichTextBox
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents btnReset As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnEdit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnPrint As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSave As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents dgvOrder As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Products As DataGridViewTextBoxColumn
+    Friend WithEvents QTY As DataGridViewTextBoxColumn
+    Friend WithEvents Amount As DataGridViewTextBoxColumn
+    Friend WithEvents lblTotal As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents lblUser As Label
+    Friend WithEvents btnbSignOut As Guna.UI2.WinForms.Guna2Button
 End Class

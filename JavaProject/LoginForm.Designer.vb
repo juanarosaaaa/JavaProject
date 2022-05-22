@@ -31,6 +31,7 @@ Partial Class LoginForm
         Me.lblSignUp = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.pnlRegister = New Guna.UI2.WinForms.Guna2Panel()
+        Me.cbRegShowPass = New Guna.UI2.WinForms.Guna2CheckBox()
         Me.btnBackToSignIn = New Guna.UI2.WinForms.Guna2Button()
         Me.txtRegUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtAge = New Guna.UI2.WinForms.Guna2TextBox()
@@ -44,6 +45,8 @@ Partial Class LoginForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.cbShowPassword = New Guna.UI2.WinForms.Guna2CheckBox()
+        Me.btnExit = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlRegister.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +100,6 @@ Partial Class LoginForm
         '
         'txtPassword
         '
-        Me.txtPassword.Animated = True
         Me.txtPassword.AutoRoundedCorners = True
         Me.txtPassword.BorderRadius = 23
         Me.txtPassword.BorderThickness = 0
@@ -111,19 +113,18 @@ Partial Class LoginForm
         Me.txtPassword.Font = New System.Drawing.Font("Segoe UI", 10.2!)
         Me.txtPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtPassword.Location = New System.Drawing.Point(213, 429)
+        Me.txtPassword.Location = New System.Drawing.Point(213, 419)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPassword.PlaceholderText = "Password"
         Me.txtPassword.SelectedText = ""
         Me.txtPassword.Size = New System.Drawing.Size(233, 48)
         Me.txtPassword.TabIndex = 6
-        Me.txtPassword.UseSystemPasswordChar = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(231, 553)
+        Me.Label1.Location = New System.Drawing.Point(244, 599)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(146, 16)
         Me.Label1.TabIndex = 7
@@ -133,7 +134,7 @@ Partial Class LoginForm
         '
         Me.lblSignUp.AutoSize = True
         Me.lblSignUp.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.lblSignUp.Location = New System.Drawing.Point(372, 553)
+        Me.lblSignUp.Location = New System.Drawing.Point(361, 599)
         Me.lblSignUp.Name = "lblSignUp"
         Me.lblSignUp.Size = New System.Drawing.Size(52, 16)
         Me.lblSignUp.TabIndex = 8
@@ -144,7 +145,7 @@ Partial Class LoginForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(191, 246)
+        Me.Label3.Location = New System.Drawing.Point(198, 264)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(274, 50)
         Me.Label3.TabIndex = 9
@@ -152,6 +153,7 @@ Partial Class LoginForm
         '
         'pnlRegister
         '
+        Me.pnlRegister.Controls.Add(Me.cbRegShowPass)
         Me.pnlRegister.Controls.Add(Me.btnBackToSignIn)
         Me.pnlRegister.Controls.Add(Me.txtRegUsername)
         Me.pnlRegister.Controls.Add(Me.txtAge)
@@ -164,11 +166,33 @@ Partial Class LoginForm
         Me.pnlRegister.Controls.Add(Me.btnSignUp)
         Me.pnlRegister.Controls.Add(Me.Label2)
         Me.pnlRegister.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pnlRegister.Location = New System.Drawing.Point(529, 131)
+        Me.pnlRegister.Location = New System.Drawing.Point(51, 177)
         Me.pnlRegister.Name = "pnlRegister"
-        Me.pnlRegister.Size = New System.Drawing.Size(641, 510)
+        Me.pnlRegister.Size = New System.Drawing.Size(624, 438)
         Me.pnlRegister.TabIndex = 10
         Me.pnlRegister.Visible = False
+        '
+        'cbRegShowPass
+        '
+        Me.cbRegShowPass.AutoSize = True
+        Me.cbRegShowPass.BackColor = System.Drawing.Color.Transparent
+        Me.cbRegShowPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbRegShowPass.CheckedState.BorderRadius = 0
+        Me.cbRegShowPass.CheckedState.BorderThickness = 1
+        Me.cbRegShowPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.cbRegShowPass.CheckMarkColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbRegShowPass.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbRegShowPass.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbRegShowPass.Location = New System.Drawing.Point(226, 317)
+        Me.cbRegShowPass.Name = "cbRegShowPass"
+        Me.cbRegShowPass.Size = New System.Drawing.Size(156, 27)
+        Me.cbRegShowPass.TabIndex = 23
+        Me.cbRegShowPass.Text = "Show Password"
+        Me.cbRegShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbRegShowPass.UncheckedState.BorderRadius = 0
+        Me.cbRegShowPass.UncheckedState.BorderThickness = 2
+        Me.cbRegShowPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.cbRegShowPass.UseVisualStyleBackColor = False
         '
         'btnBackToSignIn
         '
@@ -185,7 +209,7 @@ Partial Class LoginForm
         Me.btnBackToSignIn.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.btnBackToSignIn.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.btnBackToSignIn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.btnBackToSignIn.Location = New System.Drawing.Point(406, 424)
+        Me.btnBackToSignIn.Location = New System.Drawing.Point(330, 350)
         Me.btnBackToSignIn.Name = "btnBackToSignIn"
         Me.btnBackToSignIn.Size = New System.Drawing.Size(147, 48)
         Me.btnBackToSignIn.TabIndex = 18
@@ -195,7 +219,7 @@ Partial Class LoginForm
         '
         Me.txtRegUsername.Animated = True
         Me.txtRegUsername.AutoRoundedCorners = True
-        Me.txtRegUsername.BorderRadius = 23
+        Me.txtRegUsername.BorderRadius = 17
         Me.txtRegUsername.BorderThickness = 0
         Me.txtRegUsername.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtRegUsername.DefaultText = ""
@@ -207,19 +231,19 @@ Partial Class LoginForm
         Me.txtRegUsername.Font = New System.Drawing.Font("Segoe UI", 10.2!)
         Me.txtRegUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.txtRegUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRegUsername.Location = New System.Drawing.Point(90, 273)
+        Me.txtRegUsername.Location = New System.Drawing.Point(90, 232)
         Me.txtRegUsername.Name = "txtRegUsername"
         Me.txtRegUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtRegUsername.PlaceholderText = "Username"
         Me.txtRegUsername.SelectedText = ""
-        Me.txtRegUsername.Size = New System.Drawing.Size(215, 48)
+        Me.txtRegUsername.Size = New System.Drawing.Size(215, 36)
         Me.txtRegUsername.TabIndex = 17
         '
         'txtAge
         '
         Me.txtAge.Animated = True
         Me.txtAge.AutoRoundedCorners = True
-        Me.txtAge.BorderRadius = 23
+        Me.txtAge.BorderRadius = 17
         Me.txtAge.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtAge.DefaultText = ""
         Me.txtAge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -230,19 +254,19 @@ Partial Class LoginForm
         Me.txtAge.Font = New System.Drawing.Font("Segoe UI", 10.2!)
         Me.txtAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.txtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtAge.Location = New System.Drawing.Point(90, 207)
+        Me.txtAge.Location = New System.Drawing.Point(90, 182)
         Me.txtAge.Name = "txtAge"
         Me.txtAge.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtAge.PlaceholderText = "Age"
         Me.txtAge.SelectedText = ""
-        Me.txtAge.Size = New System.Drawing.Size(77, 48)
+        Me.txtAge.Size = New System.Drawing.Size(77, 36)
         Me.txtAge.TabIndex = 16
         '
         'txtContactNo
         '
         Me.txtContactNo.Animated = True
         Me.txtContactNo.AutoRoundedCorners = True
-        Me.txtContactNo.BorderRadius = 23
+        Me.txtContactNo.BorderRadius = 17
         Me.txtContactNo.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtContactNo.DefaultText = ""
         Me.txtContactNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -253,13 +277,13 @@ Partial Class LoginForm
         Me.txtContactNo.Font = New System.Drawing.Font("Segoe UI", 10.2!)
         Me.txtContactNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.txtContactNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtContactNo.Location = New System.Drawing.Point(330, 207)
+        Me.txtContactNo.Location = New System.Drawing.Point(330, 182)
         Me.txtContactNo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtContactNo.PlaceholderText = "Contact Number"
         Me.txtContactNo.SelectedText = ""
-        Me.txtContactNo.Size = New System.Drawing.Size(215, 48)
+        Me.txtContactNo.Size = New System.Drawing.Size(215, 36)
         Me.txtContactNo.TabIndex = 15
         '
         'cmbSex
@@ -276,7 +300,7 @@ Partial Class LoginForm
         Me.cmbSex.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.cmbSex.ItemHeight = 30
         Me.cmbSex.Items.AddRange(New Object() {"Female", "Male"})
-        Me.cmbSex.Location = New System.Drawing.Point(173, 207)
+        Me.cmbSex.Location = New System.Drawing.Point(173, 182)
         Me.cmbSex.MaxDropDownItems = 2
         Me.cmbSex.Name = "cmbSex"
         Me.cmbSex.Size = New System.Drawing.Size(147, 36)
@@ -284,9 +308,8 @@ Partial Class LoginForm
         '
         'txtReenter
         '
-        Me.txtReenter.Animated = True
         Me.txtReenter.AutoRoundedCorners = True
-        Me.txtReenter.BorderRadius = 23
+        Me.txtReenter.BorderRadius = 17
         Me.txtReenter.BorderThickness = 0
         Me.txtReenter.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtReenter.DefaultText = ""
@@ -298,20 +321,19 @@ Partial Class LoginForm
         Me.txtReenter.Font = New System.Drawing.Font("Segoe UI", 10.2!)
         Me.txtReenter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.txtReenter.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtReenter.Location = New System.Drawing.Point(330, 340)
+        Me.txtReenter.Location = New System.Drawing.Point(330, 281)
         Me.txtReenter.Name = "txtReenter"
-        Me.txtReenter.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtReenter.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtReenter.PlaceholderText = "Re-enter Password"
         Me.txtReenter.SelectedText = ""
-        Me.txtReenter.Size = New System.Drawing.Size(215, 48)
+        Me.txtReenter.Size = New System.Drawing.Size(215, 36)
         Me.txtReenter.TabIndex = 13
-        Me.txtReenter.UseSystemPasswordChar = True
         '
         'txtSurname
         '
         Me.txtSurname.Animated = True
         Me.txtSurname.AutoRoundedCorners = True
-        Me.txtSurname.BorderRadius = 23
+        Me.txtSurname.BorderRadius = 17
         Me.txtSurname.BorderThickness = 0
         Me.txtSurname.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtSurname.DefaultText = ""
@@ -328,14 +350,13 @@ Partial Class LoginForm
         Me.txtSurname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtSurname.PlaceholderText = "Surname"
         Me.txtSurname.SelectedText = ""
-        Me.txtSurname.Size = New System.Drawing.Size(215, 48)
+        Me.txtSurname.Size = New System.Drawing.Size(215, 36)
         Me.txtSurname.TabIndex = 12
         '
         'txtRegPassword
         '
-        Me.txtRegPassword.Animated = True
         Me.txtRegPassword.AutoRoundedCorners = True
-        Me.txtRegPassword.BorderRadius = 23
+        Me.txtRegPassword.BorderRadius = 17
         Me.txtRegPassword.BorderThickness = 0
         Me.txtRegPassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtRegPassword.DefaultText = ""
@@ -347,20 +368,19 @@ Partial Class LoginForm
         Me.txtRegPassword.Font = New System.Drawing.Font("Segoe UI", 10.2!)
         Me.txtRegPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.txtRegPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRegPassword.Location = New System.Drawing.Point(90, 340)
+        Me.txtRegPassword.Location = New System.Drawing.Point(90, 281)
         Me.txtRegPassword.Name = "txtRegPassword"
-        Me.txtRegPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.txtRegPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtRegPassword.PlaceholderText = "Password"
         Me.txtRegPassword.SelectedText = ""
-        Me.txtRegPassword.Size = New System.Drawing.Size(215, 48)
+        Me.txtRegPassword.Size = New System.Drawing.Size(215, 36)
         Me.txtRegPassword.TabIndex = 11
-        Me.txtRegPassword.UseSystemPasswordChar = True
         '
         'txtFirstname
         '
         Me.txtFirstname.Animated = True
         Me.txtFirstname.AutoRoundedCorners = True
-        Me.txtFirstname.BorderRadius = 23
+        Me.txtFirstname.BorderRadius = 17
         Me.txtFirstname.BorderThickness = 0
         Me.txtFirstname.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtFirstname.DefaultText = ""
@@ -377,7 +397,7 @@ Partial Class LoginForm
         Me.txtFirstname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtFirstname.PlaceholderText = "Firstname"
         Me.txtFirstname.SelectedText = ""
-        Me.txtFirstname.Size = New System.Drawing.Size(215, 48)
+        Me.txtFirstname.Size = New System.Drawing.Size(215, 36)
         Me.txtFirstname.TabIndex = 11
         '
         'btnSignUp
@@ -392,7 +412,7 @@ Partial Class LoginForm
         Me.btnSignUp.FillColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 10.8!)
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(232, 424)
+        Me.btnSignUp.Location = New System.Drawing.Point(152, 350)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(147, 48)
         Me.btnSignUp.TabIndex = 11
@@ -435,11 +455,55 @@ Partial Class LoginForm
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.UseTransparentBackground = True
         '
+        'cbShowPassword
+        '
+        Me.cbShowPassword.AutoSize = True
+        Me.cbShowPassword.BackColor = System.Drawing.Color.Transparent
+        Me.cbShowPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbShowPassword.CheckedState.BorderRadius = 0
+        Me.cbShowPassword.CheckedState.BorderThickness = 1
+        Me.cbShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.cbShowPassword.CheckMarkColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbShowPassword.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbShowPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbShowPassword.Location = New System.Drawing.Point(251, 473)
+        Me.cbShowPassword.Name = "cbShowPassword"
+        Me.cbShowPassword.Size = New System.Drawing.Size(156, 27)
+        Me.cbShowPassword.TabIndex = 21
+        Me.cbShowPassword.Text = "Show Password"
+        Me.cbShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cbShowPassword.UncheckedState.BorderRadius = 0
+        Me.cbShowPassword.UncheckedState.BorderThickness = 2
+        Me.cbShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.cbShowPassword.UseVisualStyleBackColor = False
+        '
+        'btnExit
+        '
+        Me.btnExit.Animated = True
+        Me.btnExit.AnimatedGIF = True
+        Me.btnExit.AutoRoundedCorners = True
+        Me.btnExit.BorderColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnExit.BorderRadius = 17
+        Me.btnExit.BorderThickness = 2
+        Me.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnExit.FillColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
+        Me.btnExit.Font = New System.Drawing.Font("Segoe UI", 10.8!)
+        Me.btnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnExit.Location = New System.Drawing.Point(1092, 12)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(68, 36)
+        Me.btnExit.TabIndex = 22
+        Me.btnExit.Text = "X"
+        '
         'LoginForm
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1172, 720)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.pnlRegister)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblSignUp)
@@ -449,6 +513,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.btnSignin)
         Me.Controls.Add(Me.Guna2PictureBox2)
         Me.Controls.Add(Me.Guna2PictureBox1)
+        Me.Controls.Add(Me.cbShowPassword)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -483,4 +548,7 @@ Partial Class LoginForm
     Friend WithEvents btnBackToSignIn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtRegUsername As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtAge As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents cbShowPassword As Guna.UI2.WinForms.Guna2CheckBox
+    Friend WithEvents btnExit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cbRegShowPass As Guna.UI2.WinForms.Guna2CheckBox
 End Class

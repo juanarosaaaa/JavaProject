@@ -33,17 +33,17 @@ Partial Class SplashScreen
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(1, 694)
+        Me.Panel1.Location = New System.Drawing.Point(1, 705)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1169, 24)
+        Me.Panel1.Size = New System.Drawing.Size(1169, 15)
         Me.Panel1.TabIndex = 1
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(190, Byte), Integer), CType(CType(142, Byte), Integer), CType(CType(110, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(1, 694)
+        Me.Panel2.Location = New System.Drawing.Point(1, 704)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(95, 26)
+        Me.Panel2.Size = New System.Drawing.Size(95, 15)
         Me.Panel2.TabIndex = 2
         '
         'Timer1
@@ -73,8 +73,8 @@ Partial Class SplashScreen
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1172, 720)
-        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SplashScreen"
